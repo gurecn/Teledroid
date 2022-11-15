@@ -156,6 +156,9 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.atomic.AtomicReference;
 
+/**
+ * 登录页
+ */
 @SuppressLint("HardwareIds")
 public class LoginActivity extends BaseFragment {
     private final static int SHOW_DELAY = SharedConfig.getDevicePerformanceClass() <= SharedConfig.PERFORMANCE_CLASS_AVERAGE ? 150 : 100;

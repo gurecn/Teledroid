@@ -22,6 +22,9 @@ import org.telegram.ui.ActionBar.Theme;
 
 import java.util.HashMap;
 
+/**
+ * RLottieImageView 继承于ImageView，内部调用RLottieDrawable展示播放tgs动画
+ */
 public class RLottieImageView extends ImageView {
 
     private HashMap<String, Integer> layerColors;

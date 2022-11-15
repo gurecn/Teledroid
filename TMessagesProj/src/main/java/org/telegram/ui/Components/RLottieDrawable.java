@@ -42,15 +42,23 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.CountDownLatch;
 
+/**
+ * RLottieDrawable 继承于Drawable，调用native代码创建渲染动画
+ */
 public class RLottieDrawable extends BitmapDrawable implements Animatable, BitmapsCache.Cacheable {
 
     public boolean skipFrameUpdate;
-
+    //使用文件路径创建动画
     public static native long create(String src, String json, int w, int h, int[] params, boolean precache, int[] colorReplacement, boolean limitFps, int fitzModifier);
+    //使用json字符串创建动画
     protected static native long createWithJson(String json, String name, int[] params, int[] colorReplacement);
+    //销毁动画
     public static native void destroy(long ptr);
+    //设置指定层次的颜色
     private static native void setLayerColor(long ptr, String layer, int color);
+    //替换颜色
     private static native void replaceColors(long ptr, int[] colorReplacement);
+    //获取一帧动画
     public static native int getFrame(long ptr, int frame, Bitmap bitmap, int w, int h, int stride, boolean clear);
 
     protected final int width;
