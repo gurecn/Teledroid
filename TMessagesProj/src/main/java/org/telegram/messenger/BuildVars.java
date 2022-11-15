@@ -15,13 +15,14 @@ import android.os.Build;
 public class BuildVars {
 
     public static boolean DEBUG_VERSION = false;
+    public static boolean CHECK_UPDATES = false;
     public static boolean LOGS_ENABLED = false;
     public static boolean DEBUG_PRIVATE_VERSION = false;
     public static boolean USE_CLOUD_STRINGS = true;
     public static boolean NO_SCOPED_STORAGE = Build.VERSION.SDK_INT <= 29;
     public static int BUILD_VERSION = 2757;
     public static String BUILD_VERSION_STRING = "8.9.3";
-    public static int APP_ID = 4;
+    public static int APP_ID = 15558952;
     public static String APP_HASH = "321a49ff2d246b1d75efbfdbf66885e7";
 
     public static String SMS_HASH = isStandaloneApp() ? "w0lkcmTZkKh" : (DEBUG_VERSION ? "O2P2z+/jBpJ" : "oLeq9AcOZkT");
